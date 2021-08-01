@@ -11,6 +11,11 @@
 		522E5AC126B7601200CFF61F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522E5AC026B7601200CFF61F /* ContentView.swift */; };
 		522E5AC326B7601300CFF61F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 522E5AC226B7601300CFF61F /* Assets.xcassets */; };
 		522E5AC626B7601300CFF61F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 522E5AC526B7601300CFF61F /* Preview Assets.xcassets */; };
+		522E5ACF26B7603500CFF61F /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522E5ACE26B7603500CFF61F /* Color.swift */; };
+		522E5AD126B7604600CFF61F /* Cross.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522E5AD026B7604600CFF61F /* Cross.swift */; };
+		522E5AD326B7605400CFF61F /* ControlStickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522E5AD226B7605400CFF61F /* ControlStickView.swift */; };
+		522E5AD526B7607600CFF61F /* DPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522E5AD426B7607600CFF61F /* DPadView.swift */; };
+		522E5AD726B7608F00CFF61F /* TricycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522E5AD626B7608F00CFF61F /* TricycleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +25,11 @@
 		522E5AC226B7601300CFF61F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		522E5AC526B7601300CFF61F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		522E5AC726B7601300CFF61F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		522E5ACE26B7603500CFF61F /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		522E5AD026B7604600CFF61F /* Cross.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cross.swift; sourceTree = "<group>"; };
+		522E5AD226B7605400CFF61F /* ControlStickView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlStickView.swift; sourceTree = "<group>"; };
+		522E5AD426B7607600CFF61F /* DPadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPadView.swift; sourceTree = "<group>"; };
+		522E5AD626B7608F00CFF61F /* TricycleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TricycleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +64,10 @@
 			children = (
 				522E5ABE26B7601200CFF61F /* TricycleGamePadApp.swift */,
 				522E5AC026B7601200CFF61F /* ContentView.swift */,
+				522E5AD226B7605400CFF61F /* ControlStickView.swift */,
+				522E5AD426B7607600CFF61F /* DPadView.swift */,
+				522E5AD626B7608F00CFF61F /* TricycleView.swift */,
+				522E5ACD26B7602900CFF61F /* Helpers */,
 				522E5AC226B7601300CFF61F /* Assets.xcassets */,
 				522E5AC726B7601300CFF61F /* Info.plist */,
 				522E5AC426B7601300CFF61F /* Preview Content */,
@@ -67,6 +81,15 @@
 				522E5AC526B7601300CFF61F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		522E5ACD26B7602900CFF61F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				522E5ACE26B7603500CFF61F /* Color.swift */,
+				522E5AD026B7604600CFF61F /* Cross.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +161,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				522E5AD126B7604600CFF61F /* Cross.swift in Sources */,
 				522E5AC126B7601200CFF61F /* ContentView.swift in Sources */,
+				522E5AD726B7608F00CFF61F /* TricycleView.swift in Sources */,
 				522E5ABF26B7601200CFF61F /* TricycleGamePadApp.swift in Sources */,
+				522E5AD526B7607600CFF61F /* DPadView.swift in Sources */,
+				522E5ACF26B7603500CFF61F /* Color.swift in Sources */,
+				522E5AD326B7605400CFF61F /* ControlStickView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
