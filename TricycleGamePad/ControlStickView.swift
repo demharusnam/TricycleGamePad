@@ -84,6 +84,7 @@ struct ControlStickView: View {
         )
         .scaleEffect(dragState.isActive ? 1.10 : 1)
         .animation(.easeIn)
+        .accessibility(label: Text("Draggable control stick."))
     }
 }
 

@@ -59,6 +59,7 @@ struct DPadView: View {
                     .padding(.vertical, 10)
             }
         }
+        .accessibility(label: Text("A four-way directional pad (D-Pad)."))
     }
 }
 

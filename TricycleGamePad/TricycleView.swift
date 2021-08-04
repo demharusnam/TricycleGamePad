@@ -28,6 +28,7 @@ struct TricycleView: View {
             .frame(width: circleSize * 2 + 5, height: circleSize)
         }
         .frame(width: circleSize * 2 + 5)
+        .accessibility(label: Text("Tricycle AI Logo"))
     }
 }
 
