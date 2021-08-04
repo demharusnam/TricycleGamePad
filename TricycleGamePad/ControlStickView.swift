@@ -43,8 +43,16 @@ struct ControlStickView: View {
     /// The drag state of the control stick.
     @GestureState private var dragState: DragState = .inactive
     
-    /// The possible drag offset range for the control stick.
-    private let dragRange: ClosedRange<CGFloat> = -62.5...62.5
+    /// The possible drag offset radius for the control stick.
+    @State private var dragRange: ClosedRange<CGFloat> = -50...50
+    
+    /**
+     Initializes a control stick with desired drag radius.
+        - Parameter drag: the offset radius in which drag is permitted.
+     */
+    init(drag radius: CGFloat = 50) {
+        dragRange = -abs(radius)...abs(radius)
+    }
     
     var body: some View {
         ZStack {
@@ -59,8 +67,18 @@ struct ControlStickView: View {
         .gesture(
             DragGesture(minimumDistance: 5, coordinateSpace: .local)
                 .updating($dragState) { value, state, _ in
-                    if dragRange.contains(value.translation.height) && dragRange.contains(value.translation.width) {
+                    switch (
+                        dragRange.contains(value.translation.width),
+                        dragRange.contains(value.translation.height)
+                    ) {
+                    case (true, true):
                         state = .dragging(drag: value.translation)
+                    case (true, false):
+                        state = .dragging(drag: CGSize(width: value.translation.width, height: state.translation.height))
+                    case (false, true):
+                        state = .dragging(drag: CGSize(width: state.translation.width, height: value.translation.height))
+                    default:
+                        break
                     }
                 }
         )
